@@ -4,6 +4,7 @@ import {Button} from "../components/Button";
 import {Dialog} from "../components/Dialog";
 import {Tab} from "../components/Tab";
 import {Switch} from "../components/Switch";
+import { Doc } from "../components/Doc";
 
 const Wrapper = styled.div`
   display: flex;
@@ -37,12 +38,16 @@ const GetStart=()=>{
                         <Link to="tab">Tab</Link>
                     </li>
                     <li>
-                    <Link to="switch">Switch</Link>
-                </li>
+                        <Link to="switch">Switch</Link>
+                    </li>
+                    <li>
+                        <Link to="/">返回首页</Link>
+                    </li>
                 </UL>
             </Aside>
             <main>
                 <Routes>
+                    <Route path="/" element={<Doc/>}/>
                     <Route path="button" element={<Button/>}/>
                     <Route path="dialog" element={<Dialog/>}/>
                     <Route path="tab" element={<Tab/>}/>
