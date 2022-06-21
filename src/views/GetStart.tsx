@@ -10,7 +10,7 @@ const Wrapper = styled.div`
   display: flex;
  `
 const Aside = styled.aside`
-    width: 200px;
+    width: 20vw;
     background: #f5f5f5;
   min-height: 100vh;
   `
@@ -23,6 +23,9 @@ const UL = styled.ul`
     margin: 0 10px;
   }
     `
+const Main = styled.main`
+    flex: 1;
+`
 const GetStart=()=>{
     return (
         <Wrapper>
@@ -45,7 +48,7 @@ const GetStart=()=>{
                     </li>
                 </UL>
             </Aside>
-            <main>
+            <Main>
                 <Routes>
                     <Route path="/" element={<Doc/>}/>
                     <Route path="button" element={<Button/>}/>
@@ -53,7 +56,7 @@ const GetStart=()=>{
                     <Route path="tab" element={<Tab/>}/>
                     <Route path="switch" element={<Switch/>}/>
                 </Routes>
-            </main>
+            </Main>
         </Wrapper>
     );
 
