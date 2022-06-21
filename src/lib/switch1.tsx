@@ -24,7 +24,7 @@ const Button = styled.button`
          > span { width: 26px; }
       }
     &.gulu-checked:active {
-        > span { width: 26px; margin-left: -2px; }
+        > span { width: 26px; margin-left: -8px; }
     }
     
   `
