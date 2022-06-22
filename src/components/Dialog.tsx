@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import styled from 'styled-components';
 import {Dialog1} from '../lib/dialog1';
+
 const Button = styled.button`
   position: relative;
 `
@@ -15,7 +16,7 @@ const Dialog:React.FC = ()=>{
     }
     return (
         <div>
-            {!show ? <Button onClick={onClick}>Toggle</Button> : ''}
+            {!show ? <Button onClick={onClick}>打开对话框</Button> : ''}
             {show ? <Dialog1 title="李白" content={content} cancel={cancel} /> : ''}
         </div>
     )

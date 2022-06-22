@@ -7,6 +7,7 @@ import {Home} from './components/Home'
 import {GetStart} from "./views/GetStart";
 import {Button} from "./components/Button";
 import { Doc } from './components/Doc'
+import {About} from './components/About'
 
 
 function App() {
@@ -32,7 +33,5 @@ function App() {
 
 
 
-function About() {
-  return <h2>About</h2>;
-}
+
 export default App

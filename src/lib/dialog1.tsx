@@ -15,21 +15,23 @@ const View = styled.div`
 const Wrapper = styled.div`
     display: flex;
     background: rgba(0,0,0,0.2);
-    width: 200px;
+    width: 300px;
     height: 200px;
     flex-direction: column;
     font-size: 14px;
   left : 50%;
   transform: translateX(-50%);
     position: relative;
+  padding: 3px;
+  border-radius: 4px;
 
   > main{
     flex: 1;
   }
     > footer{
       position: absolute;
-      right: 0 ;
-      bottom: 0 ;
+      right: 2px ;
+      bottom: 2px ;
       button{
         font-size: 14px ;
 
@@ -37,7 +39,7 @@ const Wrapper = styled.div`
     }
 `
 const Overlay = styled.div`
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.05);
   width: 100%;
   height: 100%;
   position: absolute;
