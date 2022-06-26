@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import {Tab} from './Tab'
-import {useState,useContext} from 'react'
+import {useState,useContext,useEffect} from 'react'
 import {C} from '../components/Context';
 
 // type Props ={
@@ -19,7 +19,14 @@ const Nav = styled.span`
 const Tabs=(props)=>{
     const c = props.children
     console.log(c);
-    c.map((tag)=>{if(tag.type.name !== 'Tab'){throw new Error('子组件必须为Tab')}})
+    let count = 0
+    useEffect(()=>{
+        count+=1
+    },[])
+    if (count>1){
+        c.map((tag)=>{if(tag.type.name !== 'Tab'){throw new Error('子组件必须为Tab')}})
+
+    }
     const titles = c.map((tag)=>tag.props.title)
     const contents = c.map((tag)=>tag.props.children.props.children)
     const current = titles.find((tag)=>{return tag===props.selected})

@@ -3,8 +3,9 @@ import { Tab } from '../lib/Tab';
 import {Tabs} from '../lib/Tabs'
 import {C} from './Context';
 
-const TabView:React.FC =()=>{
+const TabView =()=>{
     const [selected,setSelected] = useState('导航2')
+    // @ts-ignore
     return (
         <C.Provider value={{selected, setSelected}}>
             <Tabs selected={selected} >
