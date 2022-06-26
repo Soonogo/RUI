@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import ReactDOM from 'react-dom'
 
 type Props={
     title:string,
@@ -10,23 +11,24 @@ const View = styled.div`
     justify-content: content;  
     align-items: center;
     min-width: 80vw;
-    min-height: 100vh;
-  `;
+
+`;
 const Wrapper = styled.div`
     display: flex;
-    background: rgba(0,0,0,0.2);
+    background: white;
     width: 300px;
     height: 200px;
     flex-direction: column;
     font-size: 14px;
-  left : 50%;
-  transform: translateX(-50%);
+    left : 50%;
     position: relative;
-  padding: 3px;
-  border-radius: 4px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    padding: 3px;
+    border-radius: 4px;
 
   > main{
-    flex: 1;
   }
     > footer{
       position: absolute;
@@ -39,15 +41,16 @@ const Wrapper = styled.div`
     }
 `
 const Overlay = styled.div`
-  background: rgba(0, 0, 0, 0.05);
+  background: rgba(0, 0, 0, 0.5);
   width: 100%;
   height: 100%;
+  top: 0;
   position: absolute;
 `
 
 const Dialog1:React.FC<Props>=(props)=>{
     const {title,content,cancel}=props;
-    return(
+    return ReactDOM.createPortal(
         <View>
             <Overlay onClick={()=>cancel()}></Overlay>
             <Wrapper>
@@ -62,7 +65,8 @@ const Dialog1:React.FC<Props>=(props)=>{
                     <button onClick={()=>cancel()}>Cancel</button>
                 </footer>
             </Wrapper>
-        </View>
+        </View>,
+        document.body
 
     )
 }

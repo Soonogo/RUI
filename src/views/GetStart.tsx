@@ -2,7 +2,7 @@ import styled from "styled-components";
 import {Link, Route, Routes} from "react-router-dom";
 import {Button} from "../components/Button";
 import {Dialog} from "../components/Dialog";
-import {Tab} from "../components/Tab";
+import {TabView} from "../components/TabView";
 import {Switch} from "../components/Switch";
 import { Doc } from "../components/Doc";
 
@@ -11,7 +11,7 @@ const Wrapper = styled.div`
  `
 const Aside = styled.aside`
     width: 20vw;
-    background: #f5f5f5;
+    background: lightskyblue;
   min-height: 100vh;
   `
 const UL = styled.ul`
@@ -24,7 +24,6 @@ const UL = styled.ul`
   }
     `
 const Main = styled.main`
-    flex: 1;
 `
 const GetStart=()=>{
     return (
@@ -53,7 +52,7 @@ const GetStart=()=>{
                     <Route path="/" element={<Doc/>}/>
                     <Route path="button" element={<Button/>}/>
                     <Route path="dialog" element={<Dialog/>}/>
-                    <Route path="tab" element={<Tab/>}/>
+                    <Route path="tab" element={<TabView/>}/>
                     <Route path="switch" element={<Switch/>}/>
                 </Routes>
             </Main>
