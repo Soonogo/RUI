@@ -2,6 +2,7 @@ import styled from "styled-components";
 import {Tab} from './Tab'
 import {useState,useContext,useEffect} from 'react'
 import {C} from '../components/Context';
+import react from 'react'
 
 // type Props ={
 //     tag:string
@@ -16,7 +17,14 @@ const Nav = styled.span`
     
   }
 `
-const Tabs=(props)=>{
+type Props={
+    title?:string,
+    tag?:string,
+    selected:string
+    // @ts-ignore
+    children:React.CElement[]
+}
+const Tabs=(props:Props)=>{
     const c = props.children
     console.log(c);
     let count = 0

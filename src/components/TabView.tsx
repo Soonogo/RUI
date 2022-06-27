@@ -5,7 +5,6 @@ import {C} from './Context';
 
 const TabView =()=>{
     const [selected,setSelected] = useState('导航2')
-    // @ts-ignore
     return (
         <C.Provider value={{selected, setSelected}}>
             <Tabs selected={selected} >
